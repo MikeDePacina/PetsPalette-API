@@ -8,5 +8,21 @@ spring:
   properties:
    hibernate:
     dialect: org.hibernate.dialect.MySQLDialect
-  hibernate:
-   ddl-auto: update
+    ddl-auto: update
+
+ security:
+  oauth2:
+   resourceserver:
+    jwt:
+     issuer-uri: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_PFDMs0kMm
+
+ cloud:
+  aws:
+   region:
+    static: us-east-1
+    auto: false
+   credentials:
+    access-key: AKIAXH2STLJHARSACATC
+    secret-key: 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
+   end-point:
+    uri: https://sqs.us-east-1.amazonaws.com/497852570190/petsPaletteQueue
