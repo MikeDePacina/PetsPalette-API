@@ -1,5 +1,5 @@
 # Use the official OpenJDK base image with Alpine Linux
-FROM adoptopenjdk:18-jre-hotspot
+FROM openjdk:17-alpine
 
 # Set the working directory inside the container
 WORKDIR /app
