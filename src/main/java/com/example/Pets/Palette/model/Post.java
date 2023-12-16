@@ -19,11 +19,14 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(nullable = false)
+    private String title;
+
+    private String caption;
+
     @ManyToOne
     @JoinColumn(name = "uploader_id")
     private User uploader;
-
-    private String body;
 
     private long numOfLikes = 0;
 
